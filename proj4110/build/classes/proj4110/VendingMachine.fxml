@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-border-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proj4110.VendingMachineController">
+   <top>
+      <SplitPane dividerPositions="0.5" prefHeight="57.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="55.0" prefWidth="203.0" style="-fx-background-color: #ff6666;">
+               <children>
+                  <Label id="machineStatus" alignment="CENTER_RIGHT" layoutX="-31.0" layoutY="11.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="17.0" prefWidth="171.0" text="MACHINE STATUS:" textFill="WHITE" AnchorPane.leftAnchor="-31.0">
+                     <font>
+                        <Font name="Calibri Bold" size="13.0" />
+                     </font>
+                     <effect>
+                        <Glow level="1.0" />
+                     </effect>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" opacity="0.96" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #ff6666;">
+               <children>
+                  <TextField fx:id="status" editable="false" focusTraversable="false" layoutX="7.0" layoutY="15.0" prefHeight="25.0" prefWidth="364.0" text="OFF" />
+               </children>
+            </AnchorPane>
+        </items>
+         <effect>
+            <DropShadow />
+         </effect>
+      </SplitPane>
+   </top>
+   <right>
+      <SplitPane dividerPositions="0.5, 0.5" maxHeight="-Infinity" orientation="VERTICAL" prefHeight="222.0" prefWidth="271.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="94.0" prefWidth="271.0" style="-fx-background-color: #ff6666;">
+               <children>
+                  <Button fx:id="pepsi" alignment="CENTER" layoutX="11.0" layoutY="48.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="76.0" style="-fx-background-radius: 10px;" text="PEPSI">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="1.0" offsetY="1.0" radius="0.0" width="0.0" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="SW_RESIZE" />
+                     </cursor></Button>
+                  <Label layoutX="12.0" layoutY="30.0" prefHeight="18.0" prefWidth="160.0" text="MAKE SELECTION :" textFill="WHITE">
+                     <font>
+                        <Font name="Verdana Bold" size="14.0" />
+                     </font>
+                     <effect>
+                        <Glow level="1.0" />
+                     </effect>
+                  </Label>
+                  <Label layoutX="99.0" layoutY="67.0" text="75c">
+                     <font>
+                        <Font name="Verdana Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="145.0" layoutY="68.0" text="STOCK LEVEL:" textFill="WHITE">
+                     <effect>
+                        <Glow />
+                     </effect></Label>
+                  <TextField fx:id="pepsiStockDisplay" layoutX="222.0" layoutY="65.0" opacity="0.67" prefHeight="25.0" prefWidth="36.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane maxHeight="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="37.0" prefWidth="264.0" style="-fx-background-color: #ff6666;">
+               <children>
+                  <Button fx:id="sprite" alignment="CENTER" contentDisplay="CENTER" layoutX="13.0" layoutY="3.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="76.0" style="-fx-background-radius: 10px;" text="SPRITE">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="1.0" offsetY="1.0" radius="0.0" width="0.0" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="SW_RESIZE" />
+                     </cursor></Button>
+                  <Label layoutX="100.0" layoutY="10.0" text="80c">
+                     <font>
+                        <Font name="Verdana Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="145.0" layoutY="12.0" text="STOCK LEVEL:" textFill="WHITE">
+                     <effect>
+                        <Glow />
+                     </effect></Label>
+                  <TextField fx:id="spriteStockDisplay" layoutX="222.0" layoutY="7.0" prefHeight="25.0" prefWidth="36.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="-Infinity" prefHeight="70.0" prefWidth="269.0" style="-fx-background-color: #ff6666;">
+               <children>
+                  <Button fx:id="cancel" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="9.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="75.0" text="CANCEL">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="1.0" offsetY="1.0" radius="0.0" width="0.0" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="SW_RESIZE" />
+                     </cursor></Button>
+                  <Button fx:id="restock" layoutX="100.0" layoutY="9.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="66.0" text="RESTOCK">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="1.0" offsetY="1.0" radius="0.0" width="0.0" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="SW_RESIZE" />
+                     </cursor></Button>
+                  <Label fx:id="pinLabel" layoutX="102.0" layoutY="51.0" text="ENTER PIN:" visible="false" />
+                  <TextField fx:id="pinField" layoutX="166.0" layoutY="47.0" prefHeight="25.0" prefWidth="52.0" visible="false" />
+                  <Button fx:id="okPin" layoutX="222.0" layoutY="46.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="38.0" text="OK" visible="false" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </right>
+   <bottom>
+      <SplitPane dividerPositions="0.29797979797979796" prefHeight="120.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane maxHeight="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="100.0" style="-fx-background-color: #ff6666;">
+               <children>
+                  <Button id="power" fx:id="power" layoutX="52.0" layoutY="49.0" mnemonicParsing="false" style="-fx-background-radius: 10px;" text="POWER">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="SW_RESIZE" />
+                     </cursor>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="0.0" offsetY="1.0" radius="0.0" width="0.0" />
+                     </effect></Button>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="97.0" prefWidth="417.0" style="-fx-background-color: #ff6666;">
+               <children>
+                  <Button fx:id="takeChange" layoutX="166.0" layoutY="59.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="139.0" text="TAKE YOUR CHANGE">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="1.0" offsetY="1.0" radius="0.0" width="0.0" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="SW_RESIZE" />
+                     </cursor></Button>
+                  <Button fx:id="takeCan" layoutX="166.0" layoutY="12.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="137.0" text="TAKE YOUR DRINK">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="1.0" offsetY="1.0" radius="0.0" width="0.0" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="SW_RESIZE" />
+                     </cursor></Button>
+                  <TextField id="slotCans" fx:id="slotCans" layoutX="311.0" layoutY="12.0" prefHeight="33.0" prefWidth="60.0" text="0">
+                     <effect>
+                        <Glow level="0.27" />
+                     </effect></TextField>
+                  <TextField id="changeAmount" fx:id="changeAmount" editable="false" layoutX="311.0" layoutY="61.0" prefHeight="33.0" prefWidth="60.0" text="0.00" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </bottom>
+   <center>
+      <FlowPane prefHeight="207.0" prefWidth="331.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="228.0" prefWidth="331.0" style="-fx-background-color: #ff6666;">
+               <children>
+                  <Button fx:id="fiveCents" layoutX="83.0" layoutY="114.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="5c">
+                     <effect>
+                        <DropShadow height="1.0" offsetY="1.0" radius="0.0" width="0.0" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="SW_RESIZE" />
+                     </cursor></Button>
+                  <Button fx:id="tenCents" layoutX="125.0" layoutY="114.0" mnemonicParsing="false" text="10c">
+                     <effect>
+                        <DropShadow height="1.0" offsetY="1.0" radius="0.0" width="0.0" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="SW_RESIZE" />
+                     </cursor></Button>
+                  <Button fx:id="cents25" layoutX="170.0" layoutY="114.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="35.0" text="25c">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="1.0" offsetY="1.0" radius="0.0" width="0.0" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="SW_RESIZE" />
+                     </cursor></Button>
+                  <Label alignment="CENTER" layoutX="83.0" layoutY="88.0" prefHeight="17.0" prefWidth="123.0" text="ADD MONEY" textFill="WHITE">
+                     <effect>
+                        <Glow level="1.0" />
+                     </effect></Label>
+                  <Label layoutX="57.0" layoutY="178.0" text="YOU HAVE INSERTED:" textFill="WHITE">
+                     <effect>
+                        <Glow />
+                     </effect></Label>
+                  <TextField fx:id="moneyInserted" editable="false" layoutX="177.0" layoutY="174.0" prefHeight="25.0" prefWidth="56.0" text="0.00" />
+               </children>
+            </AnchorPane>
+         </children>
+      </FlowPane>
+   </center>
+</BorderPane>
